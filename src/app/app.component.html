@@ -1,0 +1,26 @@
+<hello name="{{ name }}"></hello>
+<p>Start editing to see some magic happen :)</p>
+<h3>Count: {{ count }}</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Select</th>
+      <th>ID</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of tableData; let i = index">
+      <td>
+        <input
+          type="checkbox"
+          name="ckb"
+          #checkboxes
+          (click)="chkcontrolV2(checkboxes)"
+        />
+      </td>
+      <td>{{ row.id }}</td>
+      <td>{{ row.name }}</td>
+    </tr>
+  </tbody>
+</table>
